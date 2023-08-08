@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var task = [];
+        function add_task() { //задаём функцию add_task
+            var task_list = document.getElementsByClassName('current');//обращение к элементу по названию класса
+           console.log(task_list.length);//вывод длинны лемента
+           console.log(task_list[0].innerHTML);//обращение к элементу по номеру
+    
+           var task_list = document.getElementsById('current');//обращение к элементу по айди
+           console.log(task_list);//вывод лемента <ol id = "current"></ol>
+
+           var arr = document.getElementsByTagName('div');//обращение к элементу по названию тега
+           console.log(arr.length); //вывод длинны лемента
+           console.log(arr[0]);//вывод лемента <div>div</div>
+
+           var task_list = document.getElementsByTagName('ol');//обращение к элементу ко всем тегам('ol')
+           console.log(task_list.length); //вывод длинны лемента
+
+           var new_task = document.createElement('li');//создаём новый элемент('il')
+           console.log(new_task);//вывод лемента
+
+           var task_list = document.getElementsById('current'); //вкладываем тег <ol>
+           task_list.appendChild(new_task);//добавляем к тегу <ol> тег <il>
+           console.log(task_list);//вывод лементов
+        }
+        function del_task(){ //задаём функцию del_task
+           var task_list = document.getElementsByClassName('current'); //обращение к элементу по названию класса
+           console.log(task_list); //вывод лемента
+           task_list.removeChild(task_list[0]);//удаляем элемент из списка
+        }
+    </script>
+</body>
+</html>
